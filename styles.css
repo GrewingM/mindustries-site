@@ -191,6 +191,25 @@ section + section {
   border-top: 1px solid var(--border);
 }
 
+/* ── FOOTER ─────────────────────────── */
+
+footer {
+  border-top: 1px solid var(--border);
+  margin-top: 2rem;
+}
+
+.site-footer-inner {
+  width: min(100% - 3rem, var(--max-width));
+  margin-inline: auto;
+  padding: 1.4rem 0 2rem;
+}
+
+.site-footer-inner p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 /* alternate bg for visual rhythm */
 #how-we-work,
 #about-mindustries {
@@ -454,7 +473,8 @@ button:focus-visible {
 
 @media (max-width: 48rem) {
   .site-header-inner,
-  main {
+  main,
+  .site-footer-inner {
     width: min(100% - 2rem, var(--max-width));
   }
 
