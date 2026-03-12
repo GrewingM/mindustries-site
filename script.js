@@ -69,4 +69,76 @@ document.addEventListener("DOMContentLoaded", () => {
       closeMobileMenu();
     }
   });
+
+  // ── Contact form ─────────────────────
+  const contactForm = document.querySelector("#contact-form");
+  const formFeedback = document.querySelector("#form-feedback");
+
+  if (contactForm && formFeedback) {
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const fields = {
+      name: contactForm.querySelector("#name"),
+      email: contactForm.querySelector("#email"),
+      message: contactForm.querySelector("#message"),
+      consent: contactForm.querySelector("#consent"),
+    };
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    Object.values(fields).forEach((field) => {
+      if (!field) return;
+      const evt = field.type === "checkbox" ? "change" : "input";
+      field.addEventListener(evt, () => field.classList.remove("field-invalid"));
+    });
+
+    contactForm.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      formFeedback.textContent = "";
+      formFeedback.className = "form-feedback";
+      Object.values(fields).forEach((f) => f?.classList.remove("field-invalid"));
+
+      let hasError = false;
+      if (!fields.name?.value.trim()) { fields.name?.classList.add("field-invalid"); hasError = true; }
+      if (!fields.email?.value.trim() || !emailRegex.test(fields.email.value.trim())) {
+        fields.email?.classList.add("field-invalid"); hasError = true;
+      }
+      if (!fields.message?.value.trim()) { fields.message?.classList.add("field-invalid"); hasError = true; }
+      if (!fields.consent?.checked) { fields.consent?.classList.add("field-invalid"); hasError = true; }
+
+      if (hasError) {
+        formFeedback.textContent = "Please complete all fields and accept the privacy notice.";
+        formFeedback.classList.add("form-feedback--error");
+        return;
+      }
+
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending\u2026";
+
+      try {
+        const data = new FormData(contactForm);
+        const response = await fetch(contactForm.action, {
+          method: "POST",
+          body: data,
+          headers: { Accept: "application/json" },
+        });
+
+        if (response.ok) {
+          formFeedback.textContent = "Thank you. Your message has been sent and we will be in touch shortly.";
+          formFeedback.classList.add("form-feedback--success");
+          contactForm.reset();
+        } else {
+          formFeedback.textContent = "Something went wrong. Please try again or contact us directly.";
+          formFeedback.classList.add("form-feedback--error");
+        }
+      } catch {
+        formFeedback.textContent = "Something went wrong. Please try again or contact us directly.";
+        formFeedback.classList.add("form-feedback--error");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  }
 });
