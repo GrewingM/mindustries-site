@@ -74,13 +74,24 @@ main {
   gap: 1rem;
 }
 
+/* ── BRAND / LOGO ────────────────────── */
+
 .brand {
   margin: 0;
-  font-size: 1.05rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--text);
+  display: flex;
+  align-items: center;
+}
+
+.brand a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand img {
+  height: 1.6rem;
+  width: auto;
+  display: block;
 }
 
 #primary-nav {
@@ -242,6 +253,11 @@ h2::before {
   height: 1.1em;
   background: var(--accent);
   border-radius: 2px;
+}
+
+/* hide the teal bar on centered About heading */
+#about-mindustries h2::before {
+  display: none;
 }
 
 h3 {
@@ -483,6 +499,11 @@ button:focus-visible {
     min-height: var(--nav-height);
     flex-wrap: wrap;
     padding-block: 0.5rem;
+  }
+
+  /* slightly smaller logo on mobile */
+  .brand img {
+    height: 1.3rem;
   }
 
   #primary-nav {
