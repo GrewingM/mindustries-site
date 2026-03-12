@@ -76,19 +76,19 @@ main {
 
 /* ── BRAND / LOGO ────────────────────── */
 
-.brand {
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-.brand a {
+.brand-link {
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
-.brand img {
+.brand-link:hover {
+  color: var(--accent-strong);
+}
+
+.logo-svg {
   height: 1.6rem;
   width: auto;
   display: block;
@@ -502,7 +502,7 @@ button:focus-visible {
   }
 
   /* slightly smaller logo on mobile */
-  .brand img {
+  .logo-svg {
     height: 1.3rem;
   }
 
