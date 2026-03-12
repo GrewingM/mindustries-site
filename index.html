@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindustries</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="site-header-inner">
+        <p class="brand">Mindustries</p>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-controls="primary-nav"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+        <nav id="primary-nav" aria-label="Primary">
+          <ul class="site-nav">
+            <li><a href="#hero">Hero</a></li>
+            <li><a href="#what-we-build">What we build</a></li>
+            <li><a href="#how-we-work">How we work</a></li>
+            <li><a href="#studio-products">Studio &amp; products</a></li>
+            <li><a href="#about-mindustries">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Clear, useful software for operational teams that cannot afford guesswork.</h1>
+        <p>
+          Mindustries designs and builds practical software for operational and compliance-heavy teams across the EU and UK.
+          We use AI as an enabler inside reliable workflows, not as a replacement for accountability, traceability, or sound process design.
+        </p>
+        <p>
+          <a class="cta-link" href="#contact">Talk about a project</a>
+        </p>
+      </section>
+
+      <section id="what-we-build" aria-labelledby="what-we-build-title">
+        <h2 id="what-we-build-title">What we build</h2>
+        <p>
+          We build software where operational clarity matters more than novelty. Most work falls into two categories: lean SaaS
+          products we run as a studio, and bespoke tools built with teams that have specific constraints.
+        </p>
+        <h3>Who it is for</h3>
+        <ul>
+          <li>Operations teams handling complex, recurring processes.</li>
+          <li>Compliance and risk functions that need auditable outcomes.</li>
+          <li>Organizations in regulated or policy-heavy environments across the EU and UK.</li>
+        </ul>
+        <h3>Value proposition</h3>
+        <ul>
+          <li>Software that reduces manual overhead without hiding important decisions.</li>
+          <li>Workflows that stay understandable as teams scale.</li>
+          <li>Tools people actually adopt because they fit daily operations.</li>
+        </ul>
+      </section>
+
+      <section id="how-we-work" aria-labelledby="how-we-work-title">
+        <h2 id="how-we-work-title">How we work</h2>
+        <p>
+          Our approach is intentionally compact. We begin with the operational reality, then build the smallest useful system that
+          improves outcomes and can be maintained by the team using it.
+        </p>
+        <ol>
+          <li>Understand the process: map decisions, handoffs, constraints, and failure points.</li>
+          <li>Define the shape of the solution: scope a lean product or bespoke build with clear boundaries.</li>
+          <li>Deliver in short cycles: ship practical increments and validate with real users.</li>
+          <li>Stabilize and document: ensure traceability, sensible controls, and predictable operations.</li>
+        </ol>
+        <p>
+          We favor plain language, explicit trade-offs, and measurable progress over long roadmaps and broad claims.
+        </p>
+      </section>
+
+      <section id="studio-products" aria-labelledby="studio-products-title">
+        <h2 id="studio-products-title">Studio &amp; products</h2>
+        <p>
+          Mindustries operates as a hybrid by design.
+        </p>
+        <ul>
+          <li>Product studio: we build and run focused SaaS tools around recurring operational needs.</li>
+          <li>Build partner: we design and deliver bespoke systems for organizations with specific requirements.</li>
+        </ul>
+        <p>
+          Running products ourselves keeps our standards practical. We apply the same expectations to client work: clear ownership,
+          maintainable architecture, and outcomes that hold up under daily use.
+        </p>
+      </section>
+
+      <section id="about-mindustries" aria-labelledby="about-mindustries-title">
+        <h2 id="about-mindustries-title">About Mindustries</h2>
+        <p>
+          Mindustries stands for Mind + Industries: focused thinking applied to real operational systems. The studio is small on
+          purpose, so decisions stay direct and execution stays close to the problem.
+        </p>
+        <p>
+          The brand is primary and the founder remains in the background. This is not a personality-led consultancy. It is a compact,
+          competent studio built around useful, durable software.
+        </p>
+        <h3>Tone and working principles</h3>
+        <ul>
+          <li>Calm and pragmatic over promotional language.</li>
+          <li>Specific over vague: concrete workflows, explicit assumptions, clear scope.</li>
+          <li>Durable over shiny: software that remains useful after initial launch.</li>
+        </ul>
+      </section>
+
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>
+          If you are dealing with operational complexity, fragmented tooling, or compliance pressure, share your context and we can
+          assess fit. A short message is enough to start.
+        </p>
+        <form>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message"></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
