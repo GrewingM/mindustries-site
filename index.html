@@ -143,18 +143,31 @@
           If you are dealing with operational complexity, fragmented tooling, or compliance pressure, share your context and we can
           assess fit. A short message is enough to start.
         </p>
-        <form>
+        <form id="contact-form" action="https://formspree.io/f/mzdjgaak" method="POST" novalidate>
+          <div class="form-hp" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
           <label for="name">Name</label>
-          <input id="name" name="name" type="text" />
+          <input id="name" name="name" type="text" required />
 
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" />
+          <input id="email" name="email" type="email" required />
 
           <label for="message">Message</label>
-          <textarea id="message" name="message"></textarea>
+          <textarea id="message" name="message" required></textarea>
+
+          <div class="consent-group">
+            <label class="consent-label">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span>I agree that Mindustries may store and use the information I provide to respond to my enquiry. No data is shared with third parties.</span>
+            </label>
+          </div>
 
           <button type="submit">Send</button>
         </form>
+        <div id="form-feedback" class="form-feedback" role="status" aria-live="polite"></div>
       </section>
     </main>
 
