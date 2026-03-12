@@ -11,11 +11,28 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   </head>
   <body>
     <header>
       <div class="site-header-inner">
-        <a href="#hero" class="header-logo"><img src="assets/logo.svg" alt="Mindustries" height="36"></a>
+        <a href="#hero" class="brand-link" aria-label="Mindustries home">
+          <svg class="logo-svg" viewBox="0 -1.5 121 18" width="121" height="18" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mindustries">
+            <!-- Custom M with angular notch at V-junction -->
+            <path d="
+              M 0.4 -1 H 2.6 V 13 H 0.4 Z
+              M 12.6 -1 H 14.8 V 13 H 12.6 Z
+              M 0.4 -1 L 7.6 8.5 L 14.8 -1 L 12.6 -1 L 8.6 5.4 L 7.6 7.6 L 6.6 5.4 L 2.6 -1 Z
+            " fill="currentColor"/>
+            <!-- INDUSTRIES text -->
+            <text x="15.2" y="13"
+              fill="currentColor"
+              font-family="Inter, system-ui, -apple-system, sans-serif"
+              font-size="14.5"
+              font-weight="600"
+              letter-spacing="1.8">INDUSTRIES</text>
+          </svg>
+        </a>
         <button
           class="menu-toggle"
           type="button"

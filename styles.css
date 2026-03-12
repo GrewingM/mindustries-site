@@ -81,14 +81,22 @@ main {
   gap: 1rem;
 }
 
-.header-logo {
+/* ── BRAND / LOGO ────────────────────── */
+
+.brand-link {
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
-.header-logo img {
-  height: 2rem;
+.brand-link:hover {
+  color: var(--accent-strong);
+}
+
+.logo-svg {
+  height: 1.6rem;
   width: auto;
   display: block;
 }
@@ -757,8 +765,9 @@ form button[type="submit"]:focus-visible {
     padding-block: 0.5rem;
   }
 
-  .header-logo img {
-    height: 1.5rem;
+  /* slightly smaller logo on mobile */
+  .logo-svg {
+    height: 1.3rem;
   }
 
   #primary-nav {
