@@ -48,7 +48,7 @@
             <li><a href="#how-we-work">How we work</a></li>
             <li><a href="#studio-products">Studio &amp; products</a></li>
             <li><a href="#about-mindustries">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -56,14 +56,18 @@
 
     <main>
       <section id="hero" aria-labelledby="hero-title">
-        <h1 id="hero-title">Clear, useful software for operational teams that cannot afford guesswork.</h1>
-        <p>
-          Mindustries designs and builds practical software for operational and compliance-heavy teams across the EU and UK.
-          We use AI as an enabler inside reliable workflows, not as a replacement for accountability, traceability, or sound process design.
-        </p>
-        <p>
-          <a class="cta-link" href="#contact">Talk about a project</a>
-        </p>
+        <div class="hero-inner">
+          <p class="hero-eyebrow">Software studio &middot; EU &amp; UK</p>
+          <h1 id="hero-title">Clear, useful software for operational teams that cannot afford guesswork.</h1>
+          <p class="hero-desc">
+            Mindustries designs and builds practical software for operational and compliance-heavy teams.
+            We use AI as an enabler inside reliable workflows, not as a replacement for accountability, traceability, or sound process design.
+          </p>
+          <div class="hero-actions">
+            <a class="cta-link" href="#contact">Talk about a project</a>
+            <a class="cta-link cta-link--ghost" href="#what-we-build">See what we do</a>
+          </div>
+        </div>
       </section>
 
       <section id="what-we-build" aria-labelledby="what-we-build-title">
@@ -92,11 +96,27 @@
           Our approach is intentionally compact. We begin with the operational reality, then build the smallest useful system that
           improves outcomes and can be maintained by the team using it.
         </p>
-        <ol>
-          <li>Understand the process: map decisions, handoffs, constraints, and failure points.</li>
-          <li>Define the shape of the solution: scope a lean product or bespoke build with clear boundaries.</li>
-          <li>Deliver in short cycles: ship practical increments and validate with real users.</li>
-          <li>Stabilize and document: ensure traceability, sensible controls, and predictable operations.</li>
+        <ol class="step-grid">
+          <li>
+            <span class="step-number">01</span>
+            <strong>Understand the process</strong>
+            <span>Map decisions, handoffs, constraints, and failure points.</span>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <strong>Define the shape</strong>
+            <span>Scope a lean product or bespoke build with clear boundaries.</span>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <strong>Deliver in short cycles</strong>
+            <span>Ship practical increments and validate with real users.</span>
+          </li>
+          <li>
+            <span class="step-number">04</span>
+            <strong>Stabilize &amp; document</strong>
+            <span>Ensure traceability, sensible controls, and predictable operations.</span>
+          </li>
         </ol>
         <p>
           We favor plain language, explicit trade-offs, and measurable progress over long roadmaps and broad claims.
@@ -109,10 +129,18 @@
           Mindustries operates as a hybrid by design.
           <span class="coming-soon-badge">Coming soon</span>
         </p>
-        <ul>
-          <li>Product studio: we build and run focused SaaS tools around recurring operational needs.</li>
-          <li>Build partner: we design and deliver bespoke systems for organizations with specific requirements.</li>
-        </ul>
+        <div class="studio-cards">
+          <div class="studio-card">
+            <span class="studio-card-icon">&#9670;</span>
+            <h3>Product studio</h3>
+            <p>We build and run focused SaaS tools around recurring operational needs.</p>
+          </div>
+          <div class="studio-card">
+            <span class="studio-card-icon">&#9654;</span>
+            <h3>Build partner</h3>
+            <p>We design and deliver bespoke systems for organizations with specific requirements.</p>
+          </div>
+        </div>
         <p>
           Running products ourselves keeps our standards practical. We apply the same expectations to client work: clear ownership,
           maintainable architecture, and outcomes that hold up under daily use.
@@ -129,38 +157,76 @@
           The brand is primary and the founder remains in the background. This is not a personality-led consultancy. It is a compact,
           competent studio built around useful, durable software.
         </p>
-        <h3>Pragmatic. Specific. Durable.</h3>
-        <ul>
-          <li>Calm and pragmatic over promotional language.</li>
-          <li>Specific over vague: concrete workflows, explicit assumptions, clear scope.</li>
-          <li>Durable over shiny: software that remains useful after initial launch.</li>
-        </ul>
+        <div class="values-block">
+          <h3>Pragmatic. Specific. Durable.</h3>
+          <ul>
+            <li>Calm and pragmatic over promotional language.</li>
+            <li>Specific over vague: concrete workflows, explicit assumptions, clear scope.</li>
+            <li>Durable over shiny: software that remains useful after initial launch.</li>
+          </ul>
+        </div>
       </section>
 
       <section id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact</h2>
-        <p>
-          If you are dealing with operational complexity, fragmented tooling, or compliance pressure, share your context and we can
-          assess fit. A short message is enough to start.
-        </p>
-        <form>
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" />
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h2 id="contact-title">Let's talk</h2>
+            <p>
+              If you are dealing with operational complexity, fragmented tooling, or compliance pressure, share your context and we can
+              assess fit.
+            </p>
+            <p>A short message is enough to start.</p>
+            <div class="contact-detail">
+              <span class="contact-detail-label">Based in</span>
+              <span>EU &amp; UK</span>
+            </div>
+            <div class="contact-detail">
+              <span class="contact-detail-label">Response time</span>
+              <span>Within 2 business days</span>
+            </div>
+          </div>
+          <form>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" />
 
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" />
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@company.com" />
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message"></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project or challenge..."></textarea>
 
-          <button type="submit">Send</button>
-        </form>
+            <button type="submit">Send message</button>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer>
       <div class="site-footer-inner">
-        <p>© 2026 Mirko Grewing</p>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/logo.svg" alt="Mindustries" height="24">
+            <p>Focused thinking applied to real operational systems.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="#what-we-build">What we build</a></li>
+              <li><a href="#how-we-work">How we work</a></li>
+              <li><a href="#studio-products">Studio &amp; products</a></li>
+              <li><a href="#about-mindustries">About</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Mirko Grewing</p>
+        </div>
       </div>
     </footer>
 
