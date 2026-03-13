@@ -337,7 +337,7 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
   padding-bottom: 2.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -847,6 +847,169 @@ button:disabled:hover {
   box-shadow: 0 0 0 3px #fef2f2;
 }
 
+/* ── COOKIE BANNER ──────────────────── */
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 150;
+  background: var(--bg-dark);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.2rem 1.5rem;
+}
+
+.cookie-banner[hidden] {
+  display: none;
+}
+
+.cookie-banner-inner {
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cookie-banner-inner p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  max-width: none;
+  flex: 1 1 300px;
+}
+
+.cookie-banner-inner a {
+  color: #2dd4bf;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.55rem 1.3rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.cookie-btn--accept {
+  background: var(--accent);
+  color: #fff;
+}
+
+.cookie-btn--accept:hover {
+  background: #14b8a6;
+  transform: translateY(-1px);
+}
+
+.cookie-btn--reject {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.cookie-btn--reject:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── LEGAL PAGE ─────────────────────── */
+
+.legal-page {
+  width: min(100% - 3rem, 48rem);
+  margin-inline: auto;
+  padding-block: 4rem;
+}
+
+.legal-page h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.legal-updated {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+.legal-page h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.legal-page h3 {
+  margin-top: 1.5rem;
+}
+
+.legal-page ul {
+  margin-top: 0.8rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.legal-page ul li {
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-soft);
+}
+
+.legal-page ul li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.legal-table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.legal-table th,
+.legal-table td {
+  text-align: left;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-soft);
+}
+
+.legal-table th {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--bg-alt);
+}
+
+.legal-table code {
+  font-size: 0.85em;
+  background: var(--bg-alt);
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+}
+
 /* ── RESPONSIVE ──────────────────────── */
 
 @media (max-width: 48rem) {
@@ -966,6 +1129,29 @@ button:disabled:hover {
 
   form {
     padding: 1.5rem;
+  }
+
+  .cookie-banner-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cookie-banner-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .legal-table {
+    font-size: 0.82rem;
+  }
+
+  .legal-table th,
+  .legal-table td {
+    padding: 0.5rem 0.6rem;
+  }
+
+  .legal-page {
+    padding-block: 2.5rem;
   }
 }
 

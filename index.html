@@ -4,13 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VDDG00GK10"></script>
+    <!-- Google Analytics — loaded only after cookie consent -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-VDDG00GK10');
+      function loadGA() {
+        if (document.querySelector('script[src*="googletagmanager"]')) return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VDDG00GK10';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-VDDG00GK10', { anonymize_ip: true });
+      }
+      if (localStorage.getItem('cookie_consent') === 'accepted') { loadGA(); }
     </script>
     <title>Mindustries — Practical Software for Operational &amp; Compliance Teams</title>
     <meta name="description" content="Mindustries is a software studio based in the EU and UK. We design and build practical tools for operational and compliance-heavy teams — clear workflows, auditable outcomes, no guesswork." />
@@ -318,7 +325,7 @@
             <div class="consent-group">
               <label class="consent-label">
                 <input type="checkbox" id="consent" name="consent" required />
-                <span>I agree that Mindustries may store and use the information I provide to respond to my enquiry. No data is shared with third parties.</span>
+                <span>I agree that Mindustries may store and use the information I provide to respond to my enquiry, in accordance with the <a href="privacy.html" target="_blank">privacy policy</a>. No data is shared with third parties.</span>
               </label>
             </div>
 
@@ -351,12 +358,30 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <ul role="list">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="#" id="cookie-settings">Cookie settings</a></li>
+            </ul>
+          </div>
         </div>
         <div class="footer-bottom">
           <p>&copy; 2026 Mirko Grewing</p>
         </div>
       </div>
     </footer>
+
+    <!-- Cookie consent banner -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" hidden>
+      <div class="cookie-banner-inner">
+        <p>We use cookies for anonymous analytics. No personal data is shared with third parties. <a href="privacy.html">Privacy policy</a></p>
+        <div class="cookie-banner-actions">
+          <button id="cookie-reject" class="cookie-btn cookie-btn--reject" type="button">Reject</button>
+          <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Accept</button>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js" defer></script>
   </body>
