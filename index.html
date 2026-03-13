@@ -14,6 +14,7 @@
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   </head>
   <body>
+    <a href="#hero" class="skip-link">Skip to content</a>
     <header>
       <div class="site-header-inner">
         <a href="#hero" class="brand-link" aria-label="Mindustries home">
@@ -42,7 +43,7 @@
           Menu
         </button>
         <nav id="primary-nav" aria-label="Primary">
-          <ul class="site-nav">
+          <ul class="site-nav" role="list">
             <li><a href="#hero">Home</a></li>
             <li><a href="#what-we-build">What we build</a></li>
             <li><a href="#how-we-work">How we work</a></li>
@@ -77,13 +78,13 @@
           products we run as a studio, and bespoke tools built with teams that have specific constraints.
         </p>
         <h3>Who it is for</h3>
-        <ul>
+        <ul role="list">
           <li>Operations teams handling complex, recurring processes.</li>
           <li>Compliance and risk functions that need auditable outcomes.</li>
           <li>Organizations in regulated or policy-heavy environments across the EU and UK.</li>
         </ul>
         <h3>Value proposition</h3>
-        <ul>
+        <ul role="list">
           <li>Software that reduces manual overhead without hiding important decisions.</li>
           <li>Workflows that stay understandable as teams scale.</li>
           <li>Tools people actually adopt because they fit daily operations.</li>
@@ -96,7 +97,7 @@
           Our approach is intentionally compact. We begin with the operational reality, then build the smallest useful system that
           improves outcomes and can be maintained by the team using it.
         </p>
-        <ol class="step-grid">
+        <ol class="step-grid" role="list">
           <li>
             <span class="step-number">01</span>
             <strong>Understand the process</strong>
@@ -131,12 +132,12 @@
         </p>
         <div class="studio-cards">
           <div class="studio-card">
-            <span class="studio-card-icon">&#9670;</span>
+            <span class="studio-card-icon" aria-hidden="true">&#9670;</span>
             <h3>Product studio</h3>
             <p>We build and run focused SaaS tools around recurring operational needs.</p>
           </div>
           <div class="studio-card">
-            <span class="studio-card-icon">&#9654;</span>
+            <span class="studio-card-icon" aria-hidden="true">&#9654;</span>
             <h3>Build partner</h3>
             <p>We design and deliver bespoke systems for organizations with specific requirements.</p>
           </div>
@@ -159,7 +160,7 @@
         </p>
         <div class="values-block">
           <h3>Pragmatic. Specific. Durable.</h3>
-          <ul>
+          <ul role="list">
             <li>Calm and pragmatic over promotional language.</li>
             <li>Specific over vague: concrete workflows, explicit assumptions, clear scope.</li>
             <li>Durable over shiny: software that remains useful after initial launch.</li>
@@ -214,7 +215,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer aria-label="Site footer">
       <div class="site-footer-inner">
         <div class="footer-grid">
           <div class="footer-brand">
@@ -223,7 +224,7 @@
           </div>
           <div class="footer-links">
             <h4>Navigate</h4>
-            <ul>
+            <ul role="list">
               <li><a href="#what-we-build">What we build</a></li>
               <li><a href="#how-we-work">How we work</a></li>
               <li><a href="#studio-products">Studio &amp; products</a></li>
@@ -232,7 +233,7 @@
           </div>
           <div class="footer-links">
             <h4>Connect</h4>
-            <ul>
+            <ul role="list">
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>

@@ -7,7 +7,7 @@
   --bg-dark: #101820;
   --text: #1a1a1a;
   --text-soft: #4b5563;
-  --text-muted: #9ca3af;
+  --text-muted: #6b7280;
   --border: #e5e7eb;
   --border-strong: #d1d5db;
   --input-border: #d1d5db;
@@ -53,6 +53,28 @@ a {
 
 a:hover {
   color: var(--accent-strong);
+}
+
+/* ── SKIP LINK ──────────────────────── */
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 200;
+  padding: 0.6rem 1.2rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: top 160ms ease;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+  color: #fff;
 }
 
 /* ── NAV ─────────────────────────────── */
@@ -206,9 +228,8 @@ main {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: #2dd4bf;
   margin-bottom: 1.5rem;
-  opacity: 0.9;
 }
 
 #hero h1 {
@@ -332,7 +353,7 @@ footer {
 
 .footer-brand p {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.65);
   max-width: 28ch;
   line-height: 1.6;
   margin: 0;
@@ -343,7 +364,7 @@ footer {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 1rem;
 }
 
@@ -372,7 +393,7 @@ footer {
 .footer-bottom p {
   margin: 0;
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 /* ── TYPOGRAPHY ──────────────────────── */
@@ -697,9 +718,10 @@ textarea::placeholder {
 
 input:focus,
 textarea:focus {
-  outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-soft);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 
 textarea {
@@ -944,5 +966,33 @@ button:disabled:hover {
 
   form {
     padding: 1.5rem;
+  }
+}
+
+/* ── REDUCED MOTION ─────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── HIGH CONTRAST MODE ─────────────── */
+
+@media (forced-colors: active) {
+  .skip-link:focus,
+  .cta-link,
+  .nav-cta,
+  form button[type="submit"] {
+    border: 2px solid ButtonText;
   }
 }
