@@ -118,9 +118,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         const data = new FormData(contactForm);
+        // Only send fields Formspree needs
+        const payload = new FormData();
+        payload.append("name", data.get("name"));
+        payload.append("email", data.get("email"));
+        payload.append("message", data.get("message"));
+        payload.append("_gotcha", data.get("_gotcha"));
         const response = await fetch(contactForm.action, {
           method: "POST",
-          body: data,
+          body: payload,
           headers: { Accept: "application/json" },
         });
 
@@ -129,8 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
           formFeedback.classList.add("form-feedback--success");
           contactForm.reset();
         } else {
-          const errorBody = await response.json().catch(() => ({}));
-          console.error("Formspree error:", response.status, errorBody);
+          const errorText = await response.text().catch(() => "");
+          console.error("Formspree error:", response.status, errorText);
           formFeedback.textContent = "Something went wrong. Please try again or contact us directly.";
           formFeedback.classList.add("form-feedback--error");
         }
