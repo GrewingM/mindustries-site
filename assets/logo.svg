@@ -1,15 +1,21 @@
-<svg viewBox="0 -1.5 121 18" width="121" height="18" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;display=swap');
-  </style>
-  <!-- Custom M with angular notch at V-junction -->
-  <path d="
-    M 0.4 -1 H 2.6 V 13 H 0.4 Z
-    M 12.6 -1 H 14.8 V 13 H 12.6 Z
-    M 0.4 -1 L 7.6 8.5 L 14.8 -1 L 12.6 -1 L 8.6 5.4 L 7.6 7.6 L 6.6 5.4 L 2.6 -1 Z
-  " fill="#0f766e"/>
+<svg viewBox="0 -1.5 125 18" width="125" height="18" xmlns="http://www.w3.org/2000/svg">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&amp;display=swap');</style>
+  <!-- Left tower -->
+  <path d="M 0.2 1.5 L 3.5 -1 L 6.8 1.5 L 6.8 13 L 0.2 13 Z" fill="#0f766e"/>
+  <!-- Right tower -->
+  <path d="M 8.2 1.5 L 11.5 -1 L 14.8 1.5 L 14.8 13 L 8.2 13 Z" fill="#0f766e"/>
+  <!-- Tower inner shadows -->
+  <path d="M 3.5 -1 L 6.8 1.5 L 6.8 13 L 3.5 13 Z" fill="#0b6059"/>
+  <path d="M 8.2 1.5 L 11.5 -1 L 11.5 13 L 8.2 13 Z" fill="#0b6059"/>
+  <!-- Chevron V -->
+  <path d="M 0.2 3.8 L 7.5 11 L 14.8 3.8 L 11.5 3.8 L 7.5 8 L 3.5 3.8 Z" fill="#16a38a"/>
+  <!-- Inner V cutout -->
+  <path d="M 3.5 3.8 L 7.5 8 L 11.5 3.8 L 9.8 3.8 L 7.5 6.2 L 5.2 3.8 Z" fill="#0c1a25"/>
+  <!-- Dark overlaps -->
+  <path d="M 3.5 -1 L 6.8 1.5 L 6.8 5.5 L 3.5 3.8 L 0.2 3.8 L 0.2 1.5 Z" fill="#094e48"/>
+  <path d="M 11.5 -1 L 14.8 1.5 L 14.8 3.8 L 11.5 3.8 L 8.2 5.5 L 8.2 1.5 Z" fill="#094e48"/>
   <!-- INDUSTRIES text -->
-  <text x="15.2" y="13"
+  <text x="16.5" y="13"
     fill="#0f766e"
     font-family="Inter, system-ui, -apple-system, Segoe UI, sans-serif"
     font-size="14.5"

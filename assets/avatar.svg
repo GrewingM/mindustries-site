@@ -1,8 +1,19 @@
 <svg viewBox="0 0 512 512" width="512" height="512" xmlns="http://www.w3.org/2000/svg">
-  <rect width="512" height="512" rx="64" fill="#101820"/>
-  <path d="
-    M 112 100 H 163 V 412 H 112 Z
-    M 349 100 H 400 V 412 H 349 Z
-    M 112 100 L 256 292 L 400 100 L 349 100 L 278 218 L 256 260 L 234 218 L 163 100 Z
-  " fill="#0f766e"/>
+  <rect width="512" height="512" fill="#0c1a25"/>
+  <!-- Left tower with angled top -->
+  <path d="M 100 130 L 155 80 L 210 130 L 210 415 L 100 415 Z" fill="#0f766e"/>
+  <!-- Right tower with angled top -->
+  <path d="M 302 130 L 357 80 L 412 130 L 412 415 L 302 415 Z" fill="#0f766e"/>
+  <!-- Shadow on left tower inner face -->
+  <path d="M 155 80 L 210 130 L 210 415 L 155 415 Z" fill="#0b6059"/>
+  <!-- Shadow on right tower inner face -->
+  <path d="M 302 130 L 357 80 L 357 415 L 302 415 Z" fill="#0b6059"/>
+  <!-- Center chevron V - bright front face -->
+  <path d="M 100 195 L 256 370 L 412 195 L 345 195 L 256 305 L 167 195 Z" fill="#16a38a"/>
+  <!-- Inner V cutout for chevron thickness -->
+  <path d="M 167 195 L 256 305 L 345 195 L 300 195 L 256 250 L 212 195 Z" fill="#0c1a25"/>
+  <!-- Dark overlap where chevron crosses left tower -->
+  <path d="M 155 80 L 210 130 L 210 240 L 167 195 L 100 195 L 100 130 Z" fill="#094e48"/>
+  <!-- Dark overlap where chevron crosses right tower -->
+  <path d="M 357 80 L 412 130 L 412 195 L 345 195 L 302 240 L 302 130 Z" fill="#094e48"/>
 </svg>
