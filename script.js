@@ -129,6 +129,8 @@ document.addEventListener("DOMContentLoaded", () => {
           formFeedback.classList.add("form-feedback--success");
           contactForm.reset();
         } else {
+          const errorBody = await response.json().catch(() => ({}));
+          console.error("Formspree error:", response.status, errorBody);
           formFeedback.textContent = "Something went wrong. Please try again or contact us directly.";
           formFeedback.classList.add("form-feedback--error");
         }
