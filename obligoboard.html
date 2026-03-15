@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Analytics — loaded only after cookie consent -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      function loadGA() {
+        if (document.querySelector('script[src*="googletagmanager"]')) return;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-VDDG00GK10';
+        document.head.appendChild(s);
+        gtag('js', new Date());
+        gtag('config', 'G-VDDG00GK10', { anonymize_ip: true });
+      }
+      if (localStorage.getItem('cookie_consent') === 'accepted') { loadGA(); }
+    </script>
+
+    <title>ObligoBoard — Compliance tracking for European SMEs | Mindustries</title>
+    <meta name="description" content="ObligoBoard is a lightweight compliance tracking platform for European SMEs. Manage GDPR, ESG, and regulatory obligations with pre-built frameworks, evidence collection, and audit-ready reports." />
+    <link rel="canonical" href="https://mindustries.io/obligoboard" />
+    <meta name="theme-color" content="#0f766e" />
+    <meta name="author" content="Mindustries" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mindustries" />
+    <meta property="og:title" content="ObligoBoard — Compliance tracking for European SMEs" />
+    <meta property="og:description" content="Lightweight compliance tracking for European SMEs. Pre-built GDPR &amp; ESG frameworks, evidence collection, and audit-ready reports." />
+    <meta property="og:url" content="https://mindustries.io/obligoboard" />
+    <meta property="og:image" content="https://mindustries.io/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_GB" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ObligoBoard — Compliance tracking for European SMEs" />
+    <meta name="twitter:description" content="Lightweight compliance tracking for European SMEs. Pre-built GDPR &amp; ESG frameworks, evidence collection, and audit-ready reports." />
+    <meta name="twitter:image" content="https://mindustries.io/assets/og-image.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://mindustries.io/obligoboard#app",
+          "name": "ObligoBoard",
+          "url": "https://obligoboard.app",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "description": "Lightweight compliance tracking platform for European SMEs. Manage GDPR, ESG, and regulatory obligations with pre-built frameworks, evidence collection, and audit-ready reports.",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Starter",
+              "price": "79",
+              "priceCurrency": "EUR",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "billingDuration": "P1M"
+              }
+            },
+            {
+              "@type": "Offer",
+              "name": "Pro",
+              "price": "149",
+              "priceCurrency": "EUR",
+              "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "billingDuration": "P1M"
+              }
+            }
+          ],
+          "creator": {
+            "@type": "Organization",
+            "name": "Mindustries",
+            "url": "https://mindustries.io"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Mindustries",
+              "item": "https://mindustries.io/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "ObligoBoard",
+              "item": "https://mindustries.io/obligoboard"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="obligoboard.css" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  </head>
+  <body>
+    <a href="#ob-hero" class="skip-link">Skip to content</a>
+    <header>
+      <div class="site-header-inner">
+        <a href="/" class="brand-link" aria-label="Mindustries home">
+          <svg class="logo-svg" viewBox="0 -1.5 125 18" width="125" height="18" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mindustries">
+            <path d="M 0.2 1.5 L 3.5 -1 L 6.8 1.5 L 6.8 13 L 0.2 13 Z" fill="#0f766e"/>
+            <path d="M 8.2 1.5 L 11.5 -1 L 14.8 1.5 L 14.8 13 L 8.2 13 Z" fill="#0f766e"/>
+            <path d="M 3.5 -1 L 6.8 1.5 L 6.8 13 L 3.5 13 Z" fill="#0b6059"/>
+            <path d="M 8.2 1.5 L 11.5 -1 L 11.5 13 L 8.2 13 Z" fill="#0b6059"/>
+            <path d="M 0.2 3.8 L 7.5 11 L 14.8 3.8 L 11.5 3.8 L 7.5 8 L 3.5 3.8 Z" fill="#16a38a"/>
+            <path d="M 3.5 3.8 L 7.5 8 L 11.5 3.8 L 9.8 3.8 L 7.5 6.2 L 5.2 3.8 Z" fill="#0c1a25"/>
+            <path d="M 3.5 -1 L 6.8 1.5 L 6.8 5.5 L 3.5 3.8 L 0.2 3.8 L 0.2 1.5 Z" fill="#094e48"/>
+            <path d="M 11.5 -1 L 14.8 1.5 L 14.8 3.8 L 11.5 3.8 L 8.2 5.5 L 8.2 1.5 Z" fill="#094e48"/>
+            <text x="16.5" y="13"
+              fill="currentColor"
+              font-family="Inter, system-ui, -apple-system, sans-serif"
+              font-size="14.5"
+              font-weight="600"
+              letter-spacing="1.8">INDUSTRIES</text>
+          </svg>
+        </a>
+        <nav aria-label="Product">
+          <ul class="site-nav" role="list">
+            <li><a href="/">Mindustries</a></li>
+            <li><a href="#ob-features">Features</a></li>
+            <li><a href="#ob-audience">Who it's for</a></li>
+            <li><a href="#ob-roadmap">Roadmap</a></li>
+            <li><a href="https://obligoboard.app" class="nav-cta">Try ObligoBoard</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ── HERO ──────────────────────────── -->
+      <section id="ob-hero" class="ob-hero" aria-labelledby="ob-hero-title">
+        <div class="hero-inner">
+          <p class="hero-eyebrow">A Mindustries product</p>
+          <h1 id="ob-hero-title">Stop losing sleep over compliance deadlines.</h1>
+          <p class="hero-desc">
+            ObligoBoard is a lightweight compliance tracking platform for European SMEs.
+            Pre-built GDPR and ESG frameworks, evidence collection, and audit-ready reports &mdash; so you always know where you stand.
+          </p>
+          <div class="hero-actions">
+            <a class="cta-link" href="https://obligoboard.app">Start your free trial</a>
+            <a class="cta-link cta-link--ghost" href="#ob-features">See how it works</a>
+          </div>
+          <p class="ob-hero-note">14-day free trial &middot; No credit card required</p>
+          <div class="ob-tags">
+            <span class="ob-tag">EU &amp; UK</span>
+            <span class="ob-tag">GDPR</span>
+            <span class="ob-tag">ESG</span>
+            <span class="ob-tag">CSRD</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PAIN POINTS ───────────────────── -->
+      <section id="ob-pain" aria-labelledby="ob-pain-title">
+        <h2 id="ob-pain-title">Sound familiar?</h2>
+        <div class="ob-pain-grid">
+          <div class="ob-pain-card">
+            <span class="ob-pain-icon" aria-hidden="true">&#128209;</span>
+            <h3>Scattered spreadsheets</h3>
+            <p>Obligations tracked across spreadsheets, emails, and shared drives. No single source of truth.</p>
+          </div>
+          <div class="ob-pain-card">
+            <span class="ob-pain-icon" aria-hidden="true">&#9200;</span>
+            <h3>Missed deadlines</h3>
+            <p>Critical compliance dates slip through without reliable reminders or owner accountability.</p>
+          </div>
+          <div class="ob-pain-card">
+            <span class="ob-pain-icon" aria-hidden="true">&#128269;</span>
+            <h3>No proof for auditors</h3>
+            <p>When the audit comes, you scramble to assemble evidence instead of confidently handing over a report.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FEATURES ──────────────────────── -->
+      <section id="ob-features" class="ob-features-section" aria-labelledby="ob-features-title">
+        <h2 id="ob-features-title">One board. Complete visibility.</h2>
+        <p>Everything you need to track obligations, collect evidence, and prove compliance &mdash; without the overhead of enterprise GRC tools.</p>
+
+        <div class="ob-feature-list">
+          <div class="ob-feature">
+            <div class="ob-feature-content">
+              <h3>Pre-built obligation frameworks</h3>
+              <p>Expert-designed templates for GDPR, ESG, and CSRD/ESRS. Each obligation comes with plain-language guidance, legal references, and evidence requirements. Pick a framework and start tracking in minutes.</p>
+            </div>
+          </div>
+          <div class="ob-feature">
+            <div class="ob-feature-content">
+              <h3>Evidence collection</h3>
+              <p>Upload documents, screenshots, and reports directly against each obligation. Build a timestamped evidence trail that proves exactly when and how you met each requirement.</p>
+            </div>
+          </div>
+          <div class="ob-feature">
+            <div class="ob-feature-content">
+              <h3>Audit-ready evidence packs</h3>
+              <p>Generate structured PDF reports with obligations, statuses, owners, and evidence in one click. Hand them to your auditor, legal team, or board with confidence.</p>
+            </div>
+          </div>
+          <div class="ob-feature">
+            <div class="ob-feature-content">
+              <h3>Dashboard &amp; deadline tracking</h3>
+              <p>Colour-coded statuses, risk levels, and due dates at a glance. Email reminders ensure nothing slips through the cracks. Assign owners and track accountability across your team.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── WHO IT'S FOR ──────────────────── -->
+      <section id="ob-audience" aria-labelledby="ob-audience-title">
+        <h2 id="ob-audience-title">Built for teams like yours</h2>
+        <div class="ob-audience-grid">
+          <div class="ob-audience-card">
+            <h3>B2B SaaS</h3>
+            <p>Processing customer data under GDPR with growing compliance requirements as you scale.</p>
+          </div>
+          <div class="ob-audience-card">
+            <h3>Professional services</h3>
+            <p>Agencies, consultancies, and outsourcers managing sensitive client data across engagements.</p>
+          </div>
+          <div class="ob-audience-card">
+            <h3>Fintech &amp; insurtech</h3>
+            <p>Navigating GDPR, ESG, and sector-specific rules with lean compliance teams.</p>
+          </div>
+          <div class="ob-audience-card">
+            <h3>Manufacturing &amp; industrial</h3>
+            <p>Facing ESG questionnaires from enterprise clients and needing to document compliance systematically.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── HOW IT WORKS ──────────────────── -->
+      <section id="ob-steps" class="ob-steps-section" aria-labelledby="ob-steps-title">
+        <h2 id="ob-steps-title">Up and running in 10 minutes</h2>
+        <ol class="step-grid ob-steps" role="list">
+          <li>
+            <span class="step-number">01</span>
+            <strong>Pick a framework</strong>
+            <span>Choose GDPR, ESG, or CSRD/ESRS. Every obligation is pre-loaded with guidance and evidence requirements.</span>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <strong>Assign &amp; track</strong>
+            <span>Set owners, deadlines, and risk levels. The dashboard shows exactly what needs attention.</span>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <strong>Collect evidence &amp; export</strong>
+            <span>Upload proof as you go. When audit time comes, generate a complete evidence pack in one click.</span>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ── PRICING ───────────────────────── -->
+      <section id="ob-pricing" aria-labelledby="ob-pricing-title">
+        <h2 id="ob-pricing-title">Simple, transparent pricing</h2>
+        <p>No long-term contracts. Cancel anytime.</p>
+        <div class="ob-pricing-grid">
+          <div class="ob-pricing-card">
+            <h3>Starter</h3>
+            <div class="ob-price">&euro;79<span>/month</span></div>
+            <ul role="list">
+              <li>1 organisation</li>
+              <li>5 team members</li>
+              <li>1 framework</li>
+              <li>Evidence collection &amp; export</li>
+              <li>Email reminders</li>
+            </ul>
+            <a href="https://obligoboard.app" class="ob-pricing-cta">Start free trial</a>
+          </div>
+          <div class="ob-pricing-card ob-pricing-card--featured">
+            <span class="ob-popular-badge">Most popular</span>
+            <h3>Pro</h3>
+            <div class="ob-price">&euro;149<span>/month</span></div>
+            <ul role="list">
+              <li>5 organisations</li>
+              <li>10 team members per org</li>
+              <li>All frameworks</li>
+              <li>Priority email support</li>
+              <li>Everything in Starter</li>
+            </ul>
+            <a href="https://obligoboard.app" class="ob-pricing-cta">Start free trial</a>
+          </div>
+        </div>
+        <p class="ob-pricing-note">14-day free trial on all plans &middot; No credit card required</p>
+      </section>
+
+      <!-- ── ROADMAP ───────────────────────── -->
+      <section id="ob-roadmap" class="ob-roadmap-section" aria-labelledby="ob-roadmap-title">
+        <h2 id="ob-roadmap-title">Roadmap</h2>
+        <p>ObligoBoard is actively developed. Here is where we are headed.</p>
+        <div class="ob-roadmap-placeholder">
+          <p>Visual roadmap coming soon.</p>
+        </div>
+      </section>
+
+      <!-- ── FINAL CTA ────────────────────── -->
+      <section id="ob-cta" class="ob-final-cta" aria-labelledby="ob-cta-title">
+        <h2 id="ob-cta-title">Your next satisfying audit starts here.</h2>
+        <p>Try ObligoBoard free for 14 days. No credit card, no commitments.</p>
+        <a class="cta-link" href="https://obligoboard.app">Start your free trial</a>
+      </section>
+    </main>
+
+    <footer aria-label="Site footer">
+      <div class="site-footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="assets/logo.svg" alt="Mindustries" height="24">
+            <p>Focused thinking applied to real operational systems.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Product</h4>
+            <ul role="list">
+              <li><a href="#ob-features">Features</a></li>
+              <li><a href="#ob-pricing">Pricing</a></li>
+              <li><a href="#ob-roadmap">Roadmap</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Company</h4>
+            <ul role="list">
+              <li><a href="/">Mindustries</a></li>
+              <li><a href="/#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Legal</h4>
+            <ul role="list">
+              <li><a href="privacy.html">Privacy policy</a></li>
+              <li><a href="#" id="cookie-settings">Cookie settings</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Mirko Grewing</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cookie consent banner -->
+    <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Cookie consent" hidden>
+      <div class="cookie-banner-inner">
+        <p>We use cookies for anonymous analytics. No personal data is shared with third parties. <a href="privacy.html">Privacy policy</a></p>
+        <div class="cookie-banner-actions">
+          <button id="cookie-reject" class="cookie-btn cookie-btn--reject" type="button">Reject</button>
+          <button id="cookie-accept" class="cookie-btn cookie-btn--accept" type="button">Accept</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
