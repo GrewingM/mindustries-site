@@ -88,6 +88,8 @@
   margin-top: 1.2rem !important;
   font-size: 0.85rem !important;
   color: rgba(176, 184, 193, 0.7) !important;
+  text-align: center;
+  width: 100%;
 }
 
 .ob-tags {
@@ -267,6 +269,7 @@
   gap: 1.5rem;
   margin-top: 2rem;
   max-width: 44rem;
+  margin-inline: auto;
 }
 
 .ob-pricing-card {
