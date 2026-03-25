@@ -86,10 +86,9 @@
 
 .ob-hero-note {
   margin-top: 1.2rem !important;
+  margin-inline: auto !important;
   font-size: 0.85rem !important;
   color: rgba(176, 184, 193, 0.7) !important;
-  text-align: center;
-  width: 100%;
 }
 
 .ob-tags {
